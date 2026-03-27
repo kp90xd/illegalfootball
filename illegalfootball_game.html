@@ -16,7 +16,7 @@
 }
 html{background:var(--bg);color:var(--text);font-family:var(--body);font-size:14px;-webkit-font-smoothing:antialiased}
 body{min-height:100vh;display:flex;flex-direction:column;align-items:center}
-#root{width:100%;max-width:460px;height:100vh;min-height:100vh;display:flex;flex-direction:column}
+#root{width:100%;max-width:460px;min-height:100vh;display:flex;flex-direction:column}
 ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
 button{cursor:pointer;border:none;font-family:var(--cond);font-weight:700;letter-spacing:.05em;border-radius:8px;transition:all .15s}
 button:active{transform:scale(.97);opacity:.9}
@@ -29,8 +29,6 @@ button:disabled{opacity:.35;cursor:not-allowed;transform:none}
 .btn-green{background:var(--green);color:#000}.btn-green:hover:not(:disabled){background:#30d870}
 .btn-blue{background:var(--blue);color:#fff}
 .btn-sm{padding:8px 14px;font-size:13px;width:auto}
-.back-btn{background:none;border:1px solid var(--border);border-radius:6px;color:var(--sub);font-family:var(--mono);font-size:11px;padding:5px 10px;cursor:pointer;flex-shrink:0}
-.back-btn:hover{color:var(--text);border-color:var(--border2)}
 .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:10px}
 .card2{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px;margin-bottom:8px}
 #topbar{display:none;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;gap:8px}
@@ -46,7 +44,7 @@ button:disabled{opacity:.35;cursor:not-allowed;transform:none}
 .tb-bar-fill{height:100%;border-radius:2px;transition:width .5s,background .5s}
 .tb-bank-btn{font-family:var(--mono);font-size:10px;color:var(--blue);cursor:pointer;border:1px solid #1a3050;border-radius:6px;padding:4px 8px;background:#060c14;white-space:nowrap}
 .tb-bank-btn:hover{background:#0a1828}
-.page{flex:1;overflow-y:auto;padding:12px 16px 80px;display:flex;flex-direction:column;-webkit-overflow-scrolling:touch}
+.page{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column}
 .sec-title{font-family:var(--mono);font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.15em;margin-bottom:10px}
 .ph-title{font-family:var(--cond);font-size:22px;font-weight:900;color:#fff;letter-spacing:.02em}
 .ph-sub{font-size:12px;color:var(--sub);margin-bottom:14px;margin-top:2px}
@@ -148,9 +146,9 @@ button:disabled{opacity:.35;cursor:not-allowed;transform:none}
 .news-headline{font-size:13px;color:var(--text);line-height:1.45;font-weight:500}
 .news-effect{font-family:var(--mono);font-size:10px;margin-top:5px}
 /* BANK MODAL */
-#bank-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:500;align-items:flex-end;justify-content:center;max-width:460px;left:50%;transform:translateX(-50%)}
+#bank-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:500;align-items:flex-end;justify-content:center}
 #bank-modal.open{display:flex}
-#bank-panel{background:var(--surface);border:1px solid var(--border2);border-top:2px solid var(--border2);border-radius:16px 16px 0 0;width:100%;max-width:460px;max-height:88vh;overflow-y:auto;padding:20px 16px 36px}
+#bank-panel{background:var(--surface);border:1px solid var(--border2);border-radius:16px 16px 0 0;width:100%;max-width:460px;max-height:90vh;overflow-y:auto;padding:20px 16px 36px}
 .bank-close{font-family:var(--mono);font-size:11px;color:var(--sub);cursor:pointer;float:right;padding:4px 10px;border:1px solid var(--border2);border-radius:6px;background:transparent}
 .bank-close:hover{color:var(--text)}
 .bank-title{font-family:var(--cond);font-size:28px;font-weight:900;color:var(--blue);margin-bottom:2px}
@@ -263,18 +261,18 @@ button:disabled{opacity:.35;cursor:not-allowed;transform:none}
 .player-bar-fill{height:100%;border-radius:2px}
 .player-bar-val{font-family:var(--mono);font-size:8px;font-weight:700;width:22px;text-align:right;flex-shrink:0}
 /* squad modal */
-#squad-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:510;align-items:flex-end;justify-content:center;max-width:460px;left:50%;transform:translateX(-50%)}
+#squad-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:510;align-items:flex-end;justify-content:center}
 #squad-modal.open{display:flex}
-#squad-panel{background:var(--surface);border:1px solid var(--border2);border-top:2px solid var(--border2);border-radius:16px 16px 0 0;width:100%;max-width:460px;max-height:88vh;overflow-y:auto;padding:18px 16px 32px}
+#squad-panel{background:var(--surface);border:1px solid var(--border2);border-radius:16px 16px 0 0;width:100%;max-width:460px;max-height:92vh;overflow-y:auto;padding:18px 16px 32px}
 .squad-tabs{display:flex;gap:4px;margin-bottom:14px}
 .squad-tab{flex:1;padding:8px;border-radius:8px;background:var(--card2);border:1px solid var(--border);font-family:var(--cond);font-size:13px;font-weight:700;color:var(--sub);cursor:pointer}
 .squad-tab.active{background:var(--card);border-color:var(--border2);color:#fff}
 .eff-power-bar{height:8px;background:var(--border2);border-radius:4px;overflow:hidden;margin:8px 0}
 .eff-power-fill{height:100%;border-radius:4px;transition:width .6s}
 /* TRANSFER SYSTEM */
-#transfer-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:520;align-items:flex-end;justify-content:center;max-width:460px;left:50%;transform:translateX(-50%)}
+#transfer-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:520;align-items:flex-end;justify-content:center}
 #transfer-modal.open{display:flex}
-#transfer-panel{background:var(--surface);border:1px solid #2a1a3a;border-top:2px solid #2a1a3a;border-radius:16px 16px 0 0;width:100%;max-width:460px;max-height:88vh;overflow-y:auto;padding:18px 16px 36px}
+#transfer-panel{background:var(--surface);border:1px solid #2a1a3a;border-radius:16px 16px 0 0;width:100%;max-width:460px;max-height:93vh;overflow-y:auto;padding:18px 16px 36px}
 .tr-tabs{display:flex;gap:4px;margin-bottom:14px}
 .tr-tab{flex:1;padding:8px;border-radius:8px;background:var(--card2);border:1px solid var(--border);font-family:var(--cond);font-size:12px;font-weight:700;color:var(--sub);cursor:pointer}
 .tr-tab.active{background:var(--card);border-color:#3a1a5a;color:#fff}
@@ -314,71 +312,15 @@ button:disabled{opacity:.35;cursor:not-allowed;transform:none}
       <div class="tb-phase" id="tb-phase">İSTİHBARAT</div>
     </div>
     <div class="tb-right">
-      <!-- Metric pill — tap to open overlay -->
-      <div style="position:relative">
-        <button onclick="toggleMetricPanel()" style="display:flex;align-items:center;gap:5px;background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:5px 8px;cursor:pointer">
-          <span style="font-size:10px">🔥</span>
-          <div style="width:28px;height:3px;background:var(--border2);border-radius:2px;overflow:hidden"><div id="tb-heat" style="height:100%;width:0%;background:var(--red);border-radius:2px;transition:width .3s"></div></div>
-          <span style="font-family:var(--mono);font-size:8px;color:var(--muted)">···</span>
-        </button>
+      <div class="tb-meter">
+        <div class="tb-meter-label">ŞEFFAFLIK</div>
+        <div class="tb-bar"><div class="tb-bar-fill" id="tb-tf" style="width:0%"></div></div>
       </div>
       <button class="tb-bank-btn" onclick="openBank()">🏦 BANKA</button>
       <button class="tb-bank-btn" onclick="openTransfer()" style="border-color:#2a1a3a;color:var(--purple);background:#0a060e">🔁</button>
       <button class="tb-bank-btn" onclick="openSquad()" style="border-color:#1a2a1a;color:var(--green);background:#060e06">⚽</button>
       <button class="tb-bank-btn" id="tb-heart-btn" onclick="openRel()" style="border-color:#3a1030;color:#e060c0;background:#0e060c">❤️</button>
       <div class="tb-coins" id="tb-coins">₺400</div>
-    </div>
-  </div>
-
-  <!-- METRIC OVERLAY — outside topbar, anchored below it -->
-  <div id="metric-panel" style="display:none;position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:460px;height:100vh;z-index:8000;pointer-events:none">
-    <!-- full-height dim layer, clickable -->
-    <div onclick="toggleMetricPanel()" style="position:absolute;inset:0;background:rgba(0,0,0,.65);pointer-events:all"></div>
-    <!-- card drops below topbar (~48px) -->
-    <div style="position:absolute;top:48px;left:0;right:0;background:var(--surface);border:1px solid var(--border);border-top:none;border-radius:0 0 16px 16px;padding:18px 16px 14px;box-shadow:0 16px 40px rgba(0,0,0,.9);pointer-events:all">
-      <div style="font-family:var(--mono);font-size:8px;color:var(--muted);letter-spacing:.15em;margin-bottom:16px">METRİKLER</div>
-      <div style="display:flex;flex-direction:column;gap:16px">
-
-        <div style="display:flex;align-items:center;gap:14px">
-          <span style="font-size:22px;width:28px;text-align:center;flex-shrink:0">🔥</span>
-          <div style="flex:1">
-            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
-              <span style="font-family:var(--cond);font-size:16px;font-weight:900;color:#fff">Polis Isısı</span>
-              <span id="mp-heat-val" style="font-family:var(--mono);font-size:20px;font-weight:700;color:var(--red)">0</span>
-            </div>
-            <div style="height:6px;background:var(--border2);border-radius:3px;overflow:hidden;margin-bottom:5px"><div id="mp-heat" style="height:100%;width:0%;background:var(--red);border-radius:3px;transition:width .4s"></div></div>
-            <div id="mp-heat-desc" style="font-family:var(--mono);font-size:9px;color:var(--muted)">Düşük — operasyon riski az</div>
-          </div>
-        </div>
-
-        <div style="display:flex;align-items:center;gap:14px">
-          <span style="font-size:22px;width:28px;text-align:center;flex-shrink:0">📰</span>
-          <div style="flex:1">
-            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
-              <span style="font-family:var(--cond);font-size:16px;font-weight:900;color:#fff">Manşet</span>
-              <span id="mp-press-val" style="font-family:var(--mono);font-size:20px;font-weight:700;color:var(--blue)">0</span>
-            </div>
-            <div style="height:6px;background:var(--border2);border-radius:3px;overflow:hidden;margin-bottom:5px"><div id="mp-press" style="height:100%;width:0%;background:var(--blue);border-radius:3px;transition:width .4s"></div></div>
-            <div id="mp-press-desc" style="font-family:var(--mono);font-size:9px;color:var(--muted)">Sessiz — basın ilgisi yok</div>
-          </div>
-        </div>
-
-        <div style="display:flex;align-items:center;gap:14px">
-          <span style="font-size:22px;width:28px;text-align:center;flex-shrink:0">💎</span>
-          <div style="flex:1">
-            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
-              <span style="font-family:var(--cond);font-size:16px;font-weight:900;color:#fff">Prestij</span>
-              <span id="mp-rep-val" style="font-family:var(--mono);font-size:20px;font-weight:700;color:var(--purple)">30</span>
-            </div>
-            <div style="height:6px;background:var(--border2);border-radius:3px;overflow:hidden;margin-bottom:5px"><div id="mp-rep" style="height:100%;width:30%;background:var(--purple);border-radius:3px;transition:width .4s"></div></div>
-            <div id="mp-rep-desc" style="font-family:var(--mono);font-size:9px;color:var(--muted)">Yeni — yeraltı seni tanımıyor</div>
-          </div>
-        </div>
-
-      </div>
-      <div style="margin-top:14px;border-top:1px solid var(--border);padding-top:10px;text-align:center">
-        <button onclick="toggleMetricPanel()" style="background:none;border:none;font-family:var(--mono);font-size:11px;color:var(--sub);cursor:pointer">KAPAT ✕</button>
-      </div>
     </div>
   </div>
 
@@ -400,8 +342,8 @@ button:disabled{opacity:.35;cursor:not-allowed;transform:none}
   </div>
 
   <!-- RELATIONSHIP MODAL -->
-  <div id="rel-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:500;align-items:flex-end;justify-content:center;max-width:460px;left:50%;transform:translateX(-50%)">
-    <div id="rel-panel" style="background:var(--surface);border:1px solid #3a1030;border-top:2px solid #3a1030;border-radius:16px 16px 0 0;width:100%;max-width:460px;max-height:88vh;overflow-y:auto;padding:20px 16px 36px">
+  <div id="rel-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:500;align-items:flex-end;justify-content:center">
+    <div id="rel-panel" style="background:var(--surface);border:1px solid #3a1030;border-radius:16px 16px 0 0;width:100%;max-width:460px;max-height:92vh;overflow-y:auto;padding:20px 16px 36px">
       <div style="margin-bottom:16px;overflow:hidden">
         <button class="bank-close" onclick="closeRel()" style="border-color:#3a1030;color:#e060c0">✕ KAPAT</button>
         <div style="font-family:var(--cond);font-size:28px;font-weight:900;color:#e060c0;margin-bottom:2px">❤️ İlişki</div>
@@ -447,57 +389,6 @@ button:disabled{opacity:.35;cursor:not-allowed;transform:none}
 
 <script>
 'use strict';
-
-/* ══════════════════════════════════════
-   RUN SISTEMI — Unlock + Tutorial
-   ══════════════════════════════════════ */
-let RUN_COUNT = parseInt(localStorage.getItem('illegal_runCount')||'0');
-
-const UNLOCKS = {
-  betting:0, news:0, matches:0, op_referee:0, bank_loans:0,
-  op_sabotage:1, squad_view:1, rivals:1, transfer_kul:1,
-  bank_assets:2, op_press:2, alt_ust:2, agents_full:2,
-  relations:3, op_score_fix:3, finance:3,
-  halftime_neg:4, transfer_off:4, sponsor_sab:4,
-  godfather_mode:5,
-};
-function isUnlocked(f){return RUN_COUNT>=(UNLOCKS[f]??99);}
-
-const UNLOCK_LABELS={
-  op_sabotage:'💊 Oyuncu Sabotajı',squad_view:'⚽ Kadro Analizi',
-  rivals:'📊 Rakip Sıralaması',transfer_kul:'🔁 Transfer Kulisi',
-  bank_assets:'🏠 Mal Varlığı',op_press:'📰 Basın Sızıntısı',
-  alt_ust:'📈 Alt/Üst 2.5',agents_full:'🕵️ Tüm Ajanlar',
-  relations:'❤️ İlişki Sistemi',op_score_fix:'🎯 Skor Sabitleme',
-  finance:'💰 Finans Paneli',halftime_neg:'🤝 Devre Arası',
-  transfer_off:'📋 Transfer Teklifleri',sponsor_sab:'💼 Sponsor Sabotajı',
-  godfather_mode:'💀 Godfather Modu',
-};
-
-const TUTORIAL_STEPS={
-  intel_day1:{title:'İlk Gün: İstihbarat',icon:'🕵️',body:'Haberleri oku — takımların formunu etkiler. Sonra Maçlar sekmesine geç, odds kısmına bak. Bugün bahis yaparsan para kazanabilirsin.'},
-  market_day1:{title:'Bahis Piyasası',icon:'💰',body:'MS1 = Ev sahibi kazanır · MSX = Beraberlik · MS2 = Deplasman kazanır. Kutucuğa tıkla, miktar gir, onayla.'},
-  result_day1:{title:'Sonuçlar',icon:'📊',body:'Bahsin doğru çıktıysa para geldi. Yanlıştıysa gitti. Her gün bu döngü. Zamanla yeni özellikler açılacak.'},
-};
-let _tutDismissed=new Set(JSON.parse(localStorage.getItem('illegal_tutorial')||'[]'));
-
-function showTutorial(key){
-  if(RUN_COUNT>0||_tutDismissed.has(key))return'';
-  const t=TUTORIAL_STEPS[key];if(!t)return'';
-  return `<div id="tut-${key}" style="background:linear-gradient(135deg,#0a0e1a,#0e1428);border:1px solid #3a8eff;border-left:3px solid #3a8eff;border-radius:10px;padding:12px 14px;margin-bottom:12px;display:flex;gap:10px;align-items:flex-start">
-    <span style="font-size:22px;flex-shrink:0">${t.icon}</span>
-    <div style="flex:1"><div style="font-family:var(--mono);font-size:8px;color:#3a8eff;letter-spacing:.15em;margin-bottom:3px">REHBER · İLK RUN</div>
-    <div style="font-family:var(--cond);font-size:15px;font-weight:800;color:#fff;margin-bottom:3px">${t.title}</div>
-    <div style="font-size:11px;color:var(--sub);line-height:1.5">${t.body}</div></div>
-    <button onclick="dismissTutorial('${key}')" style="background:none;border:none;color:var(--muted);font-size:16px;cursor:pointer;flex-shrink:0">✕</button>
-  </div>`;
-}
-function dismissTutorial(key){
-  _tutDismissed.add(key);
-  localStorage.setItem('illegal_tutorial',JSON.stringify([..._tutDismissed]));
-  const el=document.getElementById('tut-'+key);if(el)el.style.display='none';
-}
-
 /* ═══════════ CONSTANTS ═══════════ */
 const TEAMS={
   ASL:{name:'Aslan SK',   short:'ASL', icon:'🦁', color:'#e8a020'},
@@ -532,9 +423,9 @@ const OPS={
   goal_fix:  {name:'Skor Sabitleme',  icon:'🎯', tc:0.15, desc:'Ev sahibi +15 puan direkt etki.', eff:'home_boost',val:15},
 };
 const DIFF={
-  rookie:   {label:'Acemi',    icon:'🌱', coins:600, sm:0.5, tw:35, days:8,  desc:'600₺ · 8 Gün · Isı Limiti 35'},
-  fixer:    {label:'Fixer',    icon:'🔧', coins:400, sm:1.0, tw:42, days:10, desc:'400₺ · 10 Gün · Isı Limiti 42'},
-  godfather:{label:'Godfather',icon:'💀', coins:200, sm:2.0, tw:50, days:15, desc:'200₺ · 15 Gün · Isı Limiti 50', reqRun:5},
+  rookie:   {label:'Acemi',    icon:'🌱', coins:600, sm:0.5, tw:0.35, desc:'600₺ · 10 Gün · Limit %35 · Ceza ×0.5'},
+  fixer:    {label:'Fixer',    icon:'🔧', coins:400, sm:1.0, tw:0.42, desc:'400₺ · 10 Gün · Limit %42 · Ceza ×1.0'},
+  godfather:{label:'Godfather',icon:'💀', coins:200, sm:2.0, tw:0.50, desc:'200₺ · 10 Gün · Limit %50 · Ceza ×2.0'},
 };
 const RANKS=[
   {min:3000,rank:'S',label:'El Patron',      color:'#ffd700'},
@@ -1195,7 +1086,7 @@ function doTrAction(action, playerId, targetTid, offerId){
       G.transfer.haberciler.add(offer.id);
       G.transfer.usedOffers.add(offer.id);
       resultMsg = `💆 Masör ağınıza katıldı. Sakatlıkları 1 gün erken görürsünüz.`;
-      G.heat=clamp(G.heat+5*G.cfg.sm,0,100);
+      G.tf = clamp(G.tf + 0.05*G.cfg.sm, 0, 1);
       break;
 
     case 'haberci_yksekreter':
@@ -1204,7 +1095,7 @@ function doTrAction(action, playerId, targetTid, offerId){
       G.transfer.haberciler.add(offer.id);
       G.transfer.usedOffers.add(offer.id);
       resultMsg = `👩‍💼 YK Sekreteri sizinle. Rakip güç değişimleri görünür.`;
-      G.heat=clamp(G.heat+7*G.cfg.sm,0,100);
+      G.tf = clamp(G.tf + 0.07*G.cfg.sm, 0, 1);
       break;
 
     // ── TRANSFER BOOST ──
@@ -1212,7 +1103,7 @@ function doTrAction(action, playerId, targetTid, offerId){
       if(!offer||!targetTid) break;
       G.coins -= offer.cost;
       G.teams[targetTid].power = clamp(G.teams[targetTid].power + 8, 20, 99);
-      G.heat=clamp(G.heat+9*G.cfg.sm,0,100); G.press=clamp(G.press+4*G.cfg.sm,0,100);
+      G.tf = clamp(G.tf + 0.09*G.cfg.sm, 0, 1);
       resultMsg = `⚡ ${TEAMS[targetTid].short} güç +8! Prob güncellendi.`;
       if(offer.oneTime) G.transfer.usedOffers.add(offer.id);
       break;
@@ -1221,9 +1112,9 @@ function doTrAction(action, playerId, targetTid, offerId){
       if(!offer||!targetTid) break;
       G.coins -= offer.cost;
       G.teams[targetTid].power = clamp(G.teams[targetTid].power + 15, 20, 99);
-      G.heat=clamp(G.heat+14*G.cfg.sm,0,100); G.press=clamp(G.press+6*G.cfg.sm,0,100);
+      G.tf = clamp(G.tf + 0.14*G.cfg.sm, 0, 1);
       G.transfer.usedOffers.add(offer.id);
-      if(Math.random()<0.20){ G.heat=clamp(G.heat+12,0,100); resultMsg=`⭐ Yıldız geldi ama basın duydu! Şeffaflık eklendi.`; }
+      if(Math.random()<0.20){ G.tf=clamp(G.tf+0.12,0,1); resultMsg=`⭐ Yıldız geldi ama basın duydu! Şeffaflık eklendi.`; }
       else resultMsg=`⭐ Yıldız transfer sessizce tamamlandı. ${TEAMS[targetTid].short} güç +15!`;
       break;
 
@@ -1235,7 +1126,7 @@ function doTrAction(action, playerId, targetTid, offerId){
       const star = rost.find(p=>p.isStar);
       if(star && G.players[star.id]){ G.players[star.id].injured=true; G.players[star.id].injuredDays=3; }
       G.teams[targetTid].power = clamp(G.teams[targetTid].power - 12, 20, 99);
-      G.heat=clamp(G.heat+11*G.cfg.sm,0,100); G.rep=clamp(G.rep+3,0,100);
+      G.tf = clamp(G.tf + 0.11*G.cfg.sm, 0, 1);
       if(offer.oneTime) G.transfer.usedOffers.add(offer.id);
       resultMsg = `🚪 +120₺ komisyon! ${TEAMS[targetTid].short} yıldız kaybetti.`;
       break;
@@ -1244,7 +1135,7 @@ function doTrAction(action, playerId, targetTid, offerId){
       if(!offer||!targetTid) break;
       G.coins -= offer.cost;
       G.teams[targetTid].form = clamp(G.teams[targetTid].form - 5, -8, 8);
-      G.heat=clamp(G.heat+8*G.cfg.sm,0,100);
+      G.tf = clamp(G.tf + 0.08*G.cfg.sm, 0, 1);
       if(Math.random()<0.15){
         const myTid=pick(Object.keys(TEAMS).filter(t=>t!==targetTid));
         G.teams[myTid].form=clamp(G.teams[myTid].form-2,-8,8);
@@ -1260,7 +1151,7 @@ function doTrAction(action, playerId, targetTid, offerId){
       const ps_it=G.players[playerId];
       if(!ps_it){break;}
       ps_it.injured=false; ps_it.injuredDays=0;
-      G.heat=clamp(G.heat+0.05*G.cfg.sm*100,0,100);
+      G.tf=clamp(G.tf+0.05*G.cfg.sm,0,1);
       if(Math.random()<0.40){ ps_it.injured=true; ps_it.injuredDays=rnd(2,4); resultMsg='🩹 Sahaya sürdün ama daha kötü sakatlandı!'; resultType='risk'; }
       else resultMsg='🩹 Oyuncu sahaya çıktı, tuttu!';
       break;
@@ -1279,12 +1170,12 @@ function doTrAction(action, playerId, targetTid, offerId){
       if(!targetTid){alert('Takım seç!');return;}
       if(G.coins<120){alert('Yetersiz bakiye!');return;}
       G.coins-=120;
-      G.heat=clamp(G.heat+0.10*G.cfg.sm*100,0,100);
+      G.tf=clamp(G.tf+0.10*G.cfg.sm,0,1);
       // Extend all injuries in target team by 2 days
       const rTid=PLAYER_CATALOG[targetTid]||[];
       let extended=0;
       rTid.forEach(p=>{const ps=G.players[p.id];if(ps?.injured){ps.injuredDays+=2;extended++;}});
-      if(Math.random()<0.15){ G.heat=clamp(G.heat+12,0,100); resultMsg='🩺 Doktor parayı aldı ve sizi de sattı!'; resultType='risk'; }
+      if(Math.random()<0.15){ G.tf=clamp(G.tf+0.12,0,1); resultMsg='🩺 Doktor parayı aldı ve sizi de sattı!'; resultType='risk'; }
       else resultMsg=`🩺 Rakip kulüp doktoru ${extended} sakatlığı uzattı.`;
       break;
 
@@ -1292,7 +1183,7 @@ function doTrAction(action, playerId, targetTid, offerId){
     case 'absurt_dron':
       if(!offer||!targetTid) break;
       G.coins-=offer.cost;
-      if(Math.random()<0.30){ G.heat=clamp(G.heat+0.15*G.cfg.sm*100,0,100); resultMsg='🚁 Drone tespit edildi! Şeffaflık arttı.'; resultType='risk'; }
+      if(Math.random()<0.30){ G.tf=clamp(G.tf+0.15*G.cfg.sm,0,1); resultMsg='🚁 Drone tespit edildi! Şeffaflık arttı.'; resultType='risk'; }
       else{ G.teams[targetTid].form=clamp(G.teams[targetTid].form-2,-8,8); resultMsg='🚁 Drone başarılı! Rakip taktik bilgisi alındı.'; }
       if(offer.oneTime) G.transfer.usedOffers.add(offer.id);
       break;
@@ -1303,7 +1194,7 @@ function doTrAction(action, playerId, targetTid, offerId){
       G.teams[targetTid].form=clamp(G.teams[targetTid].form-3,-8,8);
       const allP=PLAYER_CATALOG[targetTid]||[];
       allP.forEach(p=>{if(G.players[p.id])G.players[p.id].morale=clamp(G.players[p.id].morale-15,0,100);});
-      G.heat=clamp(G.heat+0.04*G.cfg.sm*100,0,100);
+      G.tf=clamp(G.tf+0.04*G.cfg.sm,0,1);
       if(Math.random()<0.10){
         const rnd_tid=pick(Object.keys(TEAMS).filter(t=>t!==targetTid));
         G.teams[rnd_tid].form=clamp(G.teams[rnd_tid].form-1,-8,8);
@@ -1333,7 +1224,7 @@ function doTrAction(action, playerId, targetTid, offerId){
       const yRost=PLAYER_CATALOG[targetTid]||[];
       yRost.forEach(p=>{const ps=G.players[p.id];if(ps){ps.form=clamp(ps.form-2,-5,5);ps.morale=clamp(ps.morale-10,0,100);}});
       G.teams[targetTid].power=clamp(G.teams[targetTid].power-5,20,99);
-      G.heat=clamp(G.heat+0.12*G.cfg.sm*100,0,100);
+      G.tf=clamp(G.tf+0.12*G.cfg.sm,0,1);
       resultMsg=`🍽️ ${TEAMS[targetTid].short} yemek savaşını kaybetti. Tüm kadro form −2.`;
       if(offer.oneTime) G.transfer.usedOffers.add(offer.id);
       break;
@@ -1341,7 +1232,7 @@ function doTrAction(action, playerId, targetTid, offerId){
     case 'absurt_pasaport':
       if(!offer||!targetTid) break;
       G.coins-=offer.cost;
-      G.heat=clamp(G.heat+0.13*G.cfg.sm*100,0,100);
+      G.tf=clamp(G.tf+0.13*G.cfg.sm,0,1);
       const pRost=PLAYER_CATALOG[targetTid]||[];
       const yabanciStar=pRost.find(p=>p.isStar);
       if(yabanciStar&&G.players[yabanciStar.id]){
@@ -1354,7 +1245,7 @@ function doTrAction(action, playerId, targetTid, offerId){
     case 'absurt_eskihoce':
       if(!offer||!targetTid) break;
       G.coins-=offer.cost;
-      G.heat=clamp(G.heat+0.06*G.cfg.sm*100,0,100);
+      G.tf=clamp(G.tf+0.06*G.cfg.sm,0,1);
       G.teams[targetTid].form=clamp(G.teams[targetTid].form-2,-8,8);
       G.transfer.usedOffers.add(offer.id);
       resultMsg=`📞 Eski hoca konuştu! ${TEAMS[targetTid].short} savunma şeması bilindi.`;
@@ -1363,7 +1254,7 @@ function doTrAction(action, playerId, targetTid, offerId){
     case 'absurt_faks':
       if(!offer||!targetTid) break;
       G.coins-=offer.cost;
-      G.heat=clamp(G.heat+0.10*G.cfg.sm*100,0,100);
+      G.tf=clamp(G.tf+0.10*G.cfg.sm,0,1);
       const fRoll=Math.random();
       if(fRoll<0.50){ G.teams[targetTid].power=clamp(G.teams[targetTid].power+12,20,99); resultMsg='🖊️ FAKS BAŞARILI! Son dakika transfer tamamlandı. Güç +12!'; }
       else if(fRoll<0.80){ resultMsg='🖊️ İmza iptal! Oyuncu fikrini değiştirdi. Para gitti.'; resultType='risk'; }
@@ -1628,7 +1519,7 @@ function sabotajPlayer(pid, mi){
   if(!cat) return;
   const ps=G.players[pid];
   const tf_cost=cat.isStar?0.14:0.08;
-  G.heat=clamp(G.heat+tf_cost*G.cfg.sm*100,0,100);
+  G.tf=clamp(G.tf+tf_cost*G.cfg.sm,0,1);
   G.opDone=true;
   // Injure the player 1-3 days
   ps.injured=true;
@@ -1853,8 +1744,8 @@ const REL_EVENTS = {
     {type:'drama', icon:'📵', msg:'Seni başka biriyle görüntüledi mi diye sordu. Stres yüksek.', effect:{drama:15}},
   ],
   kiralik: [
-    {type:'scandal',icon:'📸', msg:'Kiralık sevgilin tanıdık bir gazeteciye yakalandı. Birlikte görüntülendiniz.', effect:{press:0.08}},
-    {type:'bonus',  icon:'🎩', msg:'Sosyal etkinlikte cover mükemmeldi. Şeffaflık azaldı.', effect:{heat:-0.04}},
+    {type:'scandal',icon:'📸', msg:'Kiralık sevgilin tanıdık bir gazeteciye yakalandı. Birlikte görüntülendiniz.', effect:{tf:0.08}},
+    {type:'bonus',  icon:'🎩', msg:'Sosyal etkinlikte cover mükemmeldi. Şeffaflık azaldı.', effect:{tf:-0.04}},
     {type:'scandal',icon:'💰', msg:'Kiralık sevgilin başkasından daha iyi teklif aldı. Bilgi sızdırabilir.', effect:{tf:0.10, coins:-100}},
     {type:'drama',  icon:'🙄', msg:'Anlaşma yenileme zamanı. Ek 50₺ talep etti.', effect:{coins:-50}},
     {type:'bonus',  icon:'🥂', msg:'VIP etkinliğe birlikte gittiniz. Cover hikayesi güçlendi.', effect:{cover:0.05}},
@@ -1869,7 +1760,7 @@ const REL_EVENTS = {
   ],
   duzenli: [
     {type:'drama',  icon:'👁️', msg:'Maça gelmek istedi. "Neden izin vermiyorsun?" Kıskançlık tırmanıyor.', effect:{drama:20, tf:0.05}},
-    {type:'scandal',icon:'📱', msg:'Telefonda tesadüfen operasyon mesajlarını gördü. Şeffaflık sıçradı.', effect:{heat:0.12}},
+    {type:'scandal',icon:'📱', msg:'Telefonda tesadüfen operasyon mesajlarını gördü. Şeffaflık sıçradı.', effect:{tf:0.12}},
     {type:'bonus',  icon:'🍀', msg:'İlişki stabil. Aklın berrak, kararların keskin.', effect:{luck:0.10, focus:0.03}},
     {type:'drama',  icon:'🌹', msg:'Yıldönümünü unuttun. Hediye gönder ya da dinle.', effect:{coins:-80, drama:25}},
     {type:'info',   icon:'🗣️', msg:'Arkadaş çevresinden bir kulüp içi dedikodu geldi. İyi intel.', effect:{infoTeam:true}},
@@ -1877,11 +1768,11 @@ const REL_EVENTS = {
     {type:'scandal',icon:'😡', msg:'"Neredesin?" kavgası sokak ortasında. Kameralar varmış.', effect:{tf:0.09, drama:30}},
   ],
   aldatma: [
-    {type:'scandal',icon:'🎭', msg:'İki telefon, iki mesaj, yanlış kişiye gönderildi. YAKALANDIN.', effect:{heat:0.25,press:0.15,drama:50,coins:-200}},
-    {type:'scandal',icon:'🕵️', msg:'Dedektif tutulmuş. Takip ediliyorsun. Şeffaflık tırmanıyor.', effect:{heat:0.15}},
+    {type:'scandal',icon:'🎭', msg:'İki telefon, iki mesaj, yanlış kişiye gönderildi. YAKALANDIN.', effect:{tf:0.25, drama:50, coins:-200}},
+    {type:'scandal',icon:'🕵️', msg:'Dedektif tutulmuş. Takip ediliyorsun. Şeffaflık tırmanıyor.', effect:{tf:0.15}},
     {type:'bonus',  icon:'🃏', msg:'İki farklı dünyada iki farklı intel. Bugün bilgi avantajın var.', effect:{infoTeam:true, luck:0.12}},
     {type:'drama',  icon:'💔', msg:'Biri diğerini aramış. Açıklama zamanı. Kaos.', effect:{drama:40, focus:-0.05}},
-    {type:'scandal',icon:'📰', msg:'Magazin muhabiri olayın kokusunu almış. Yarın gazete kupürü çıkabilir.', effect:{heat:0.18,press:0.10,coins:-150}},
+    {type:'scandal',icon:'📰', msg:'Magazin muhabiri olayın kokusunu almış. Yarın gazete kupürü çıkabilir.', effect:{tf:0.18, coins:-150}},
     {type:'bonus',  icon:'🎯', msg:'Her iki taraf da bugün seni motive etti. Odak zirve.', effect:{focus:0.05, luck:0.08}},
   ],
 };
@@ -1951,13 +1842,13 @@ function processRelDay() {
   if (G.rel.drama > 70 && Math.random() < rel.scandalRisk) {
     const pen = Math.floor(80 * G.cfg.sm);
     G.coins -= pen;
-    G.press=clamp(G.press+8,0,100);
+    G.tf = clamp(G.tf + 0.08, 0, 1);
     G.log.push({l:`💔 İlişki Skandalı!`, v:-pen});
   }
 
   // Aldatma catch risk
   if (rel.catchRisk && Math.random() < rel.catchRisk) {
-    G.heat=clamp(G.heat+rel.catchPenalty*100,0,100); G.press=clamp(G.press+rel.catchPenalty*60,0,100);
+    G.tf = clamp(G.tf + rel.catchPenalty, 0, 1);
     const pen = 200;
     G.coins -= pen;
     G.log.push({l:`🎭 YAKALANDIN — Aldatma ifşa!`, v:-pen});
@@ -1966,7 +1857,7 @@ function processRelDay() {
 
   // Kiralik leak risk
   if (rel.leakRisk && Math.random() < rel.leakRisk) {
-    G.heat=clamp(G.heat+10,0,100); G.press=clamp(G.press+5,0,100);
+    G.tf = clamp(G.tf + 0.10, 0, 1);
     G.log.push({l:`💄 Kiralık sevgili bilgi sızdırdı`, v:0});
   }
 
@@ -1980,9 +1871,7 @@ function processRelDay() {
 
 function applyRelEffect(eff) {
   if (!eff) return;
-  if(eff.heat) G.heat=clamp(G.heat+(eff.heat||0)*100,0,100);
-  if(eff.press) G.press=clamp(G.press+(eff.press||0)*100,0,100);
-  if(eff.rep) G.rep=clamp(G.rep+(eff.rep||0)*100,0,100);
+  if (eff.tf)    G.tf    = clamp(G.tf    + eff.tf, 0, 1);
   if (eff.coins) G.coins = Math.max(0, G.coins + eff.coins);
   if (eff.drama) G.rel.drama = clamp(G.rel.drama + eff.drama, 0, 100);
   if (eff.focus) G.rel.activeBonuses.focus = (G.rel.activeBonuses.focus||0) + eff.focus;
@@ -2102,10 +1991,10 @@ function htmlBSocial() {
   <div style="font-family:var(--mono);font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px">İLİŞKİ SEÇ</div>
   ${typeCards}`;
 }
-function initRun(name,diff,myTeam){
+function initRun(name,diff){
   const cfg=DIFF[diff];
   G={
-    name,diff,cfg,day:1,totalDays:cfg.days||10,coins:cfg.coins,heat:0,press:0,rep:30,scandals:0,myTeam:myTeam||null,
+    name,diff,cfg,day:1,coins:cfg.coins,tf:0,scandals:0,
     teams:{},
     phase:'intel',
     matches:[],news:[],
@@ -2150,7 +2039,7 @@ function hireAgent(id){
 function doOp(opId,mi){
   if(G.opDone)return;
   const op=OPS[opId]; G.opDone=true;
-  G.heat=clamp(G.heat+op.tc*G.cfg.sm*100,0,100);
+  G.tf=clamp(G.tf+op.tc*G.cfg.sm,0,1);
   const m=G.matches[mi];
   m.opEff={t:op.eff,v:op.val};
   m.prob=prob(m.h,m.a,m.opEff);
@@ -2190,24 +2079,11 @@ function resolveDay(){
   }
   payLoans();
   processRelDay();
-  // 🔥 Polis baskısı
-  if(G.heat>=G.cfg.tw){
+  if(G.tf>=G.cfg.tw){
     const pen=Math.floor(150*G.cfg.sm);
     G.coins-=pen; G.scandals++;
-    G.log.push({l:'🚔 Polis Baskısı!',v:-pen});
-    G.heat=clamp(G.heat-20,0,100);
-  }
-  // 📰 Basın baskısı >65 → teklif iptal
-  if((G.press||0)>=65){
-    G.log.push({l:'📰 Basın Baskısı — Haber sızdı',v:0});
-    G.press=clamp(G.press-10,0,100);
-  }
-  // 💎 Prestij >70 → bonus
-  if((G.rep||30)>=70&&Math.random()<0.4){
-    const bonus=Math.floor(20+Math.random()*40);
-    G.coins+=bonus;
-    G.log.push({l:'💎 Prestij Bonusu',v:bonus});
-    G.rep=clamp(G.rep-5,0,100);
+    G.log.push({l:'⚠️ Skandal Cezası!',v:-pen});
+    G.tf=clamp(G.tf-.15,0,1);
   }
   G.coins=Math.max(0,G.coins);
   simBots();
@@ -2243,250 +2119,7 @@ function simMatch(m){
   else if(sc<-1.5){ag=rnd(1,3);hg=rnd(0,Math.max(0,ag-1));if(hg>=ag)hg=ag-1;}
   else{const b=rnd(0,2);hg=b;ag=b;}
   const res=hg>ag?'HOME':hg<ag?'AWAY':'DRAW';
-  // Generate match timeline events
-  const events = genMatchEvents(m.h, m.a, hg, ag, m.opEff);
-  return{hg,ag,res,total:hg+ag,events};
-}
-
-function genMatchEvents(hid, aid, hg, ag, opEff){
-  const ht=TEAMS[hid], at=TEAMS[aid];
-  const events=[];
-  const usedMins=new Set();
-  const nextMin=(base,spread)=>{
-    let m=base+rnd(-spread,spread);
-    while(usedMins.has(m))m++;
-    usedMins.add(m);
-    return Math.max(1,Math.min(90,m));
-  };
-  // Goal events
-  const hGoalMins=[]; for(let i=0;i<hg;i++) hGoalMins.push(nextMin(rnd(10,85),8));
-  const aGoalMins=[]; for(let i=0;i<ag;i++) aGoalMins.push(nextMin(rnd(10,85),8));
-  const hPlayers=PLAYER_CATALOG[hid]||[]; 
-  const aPlayers=PLAYER_CATALOG[aid]||[];
-  hGoalMins.forEach(min=>{
-    const p=pick(hPlayers.filter(p=>p.pos!=='GK')||hPlayers);
-    events.push({min,type:'goal',team:'home',icon:'⚽',txt:`${ht.short} GOL! ${p.name} müthiş bir vuruş!`});
-  });
-  aGoalMins.forEach(min=>{
-    const p=pick(aPlayers.filter(p=>p.pos!=='GK')||aPlayers);
-    events.push({min,type:'goal',team:'away',icon:'⚽',txt:`${at.short} GOL! ${p.name} defansı geçti!`});
-  });
-  // Foul/card events  
-  const foulCount=rnd(2,5);
-  for(let i=0;i<foulCount;i++){
-    const isH=Math.random()>.5;
-    const team=isH?hid:aid;
-    const tname=isH?ht.short:at.short;
-    const pl=pick(isH?hPlayers:aPlayers);
-    const isRed=Math.random()<0.08;
-    events.push({min:nextMin(rnd(15,88),10),type:isRed?'red':'yellow',team:isH?'home':'away',
-      icon:isRed?'🟥':'🟨',txt:`${tname} — ${pl.name} ${isRed?'kırmızı kart! Sahadan çıkıyor':'sarı kart gördü'}`});
-  }
-  // Dangerous attacks
-  const dangerCount=rnd(3,6);
-  for(let i=0;i<dangerCount;i++){
-    const isH=Math.random()>.5;
-    const tname=isH?ht.short:at.short;
-    const msgs=['tehlikeli atak! Az kalsın gol...','harika kombinasyon ama kurtarış geldi!','direkten döndü!','kaleci son anda müdahale!'];
-    events.push({min:nextMin(rnd(5,89),12),type:'danger',team:isH?'home':'away',
-      icon:'⚡',txt:`${tname} — ${pick(msgs)}`});
-  }
-  // Var/special event
-  if(Math.random()<0.3){
-    events.push({min:nextMin(rnd(20,85),5),type:'var',team:'neutral',
-      icon:'📺',txt:`VAR incelemesi! Hakem ekrana bakıyor...`});
-  }
-  // Op effect event
-  if(opEff){
-    events.push({min:nextMin(5,3),type:'op',team:'neutral',
-      icon:'🎯',txt:opEff.t==='home_boost'?'⚡ Operasyon etkili — hakem ev sahibine avantaj sağlıyor':'💊 Operasyon devreye girdi — kilit oyuncu yavaşlıyor'});
-  }
-  // Whistle events  
-  events.push({min:45,type:'whistle',team:'neutral',icon:'🔔',txt:'Devre arası düdüğü! İlk 45 dakika bitti.'});
-  events.push({min:90,type:'whistle',team:'neutral',icon:'🏁',txt:'Maç sonu düdüğü!'});
-  events.sort((a,b)=>a.min-b.min);
-  return events;
-}
-
-/* ── MATCH WATCH MODAL ────────────────────────────────── */
-let _watchTimer=null;
-let _watchState=null;
-
-function watchMatch(matchIdx){
-  const m=G.matches[matchIdx];
-  if(!m?.result)return;
-  clearInterval(_watchTimer);
-  const h=TEAMS[m.h],a=TEAMS[m.a];
-  _watchState={
-    matchIdx, events:m.result.events||[], 
-    hg:m.result.hg, ag:m.result.ag,
-    curHg:0, curAg:0,
-    eventIdx:0, speed:600,
-    finished:false,
-    h, a,
-    bet: G.bets?.[matchIdx]||null,
-  };
-  // Build modal
-  let modal=document.getElementById('watch-modal');
-  if(!modal){
-    modal=document.createElement('div');
-    modal.id='watch-modal';
-    modal.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:800;display:flex;align-items:flex-end;justify-content:center';
-    modal.innerHTML=`<div style="background:var(--surface);border:1px solid var(--border2);border-radius:16px 16px 0 0;width:100%;max-width:460px;max-height:88vh;display:flex;flex-direction:column">
-      <div style="padding:14px 16px 0;flex-shrink:0">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-          <div id="wm-title" style="font-family:var(--cond);font-size:18px;font-weight:900;color:#fff"></div>
-          <button onclick="closeWatchModal()" style="background:none;border:1px solid var(--border);border-radius:6px;color:var(--sub);font-family:var(--mono);font-size:11px;padding:4px 10px;cursor:pointer">✕ KAPAT</button>
-        </div>
-        <!-- Live scoreboard -->
-        <div style="background:var(--card);border-radius:10px;padding:14px;margin-bottom:10px;display:flex;align-items:center;justify-content:space-between">
-          <div style="text-align:center;flex:1">
-            <div id="wm-h-icon" style="font-size:24px"></div>
-            <div id="wm-h-name" style="font-family:var(--cond);font-size:14px;font-weight:800;color:#fff;margin-top:2px"></div>
-          </div>
-          <div style="text-align:center;min-width:80px">
-            <div id="wm-score" style="font-family:var(--cond);font-size:36px;font-weight:900;color:#fff;line-height:1">0 – 0</div>
-            <div id="wm-min" style="font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:2px">⏱ 0'</div>
-          </div>
-          <div style="text-align:center;flex:1">
-            <div id="wm-a-icon" style="font-size:24px"></div>
-            <div id="wm-a-name" style="font-family:var(--cond);font-size:14px;font-weight:800;color:#fff;margin-top:2px"></div>
-          </div>
-        </div>
-        <!-- Bet status -->
-        <div id="wm-bet" style="display:none;background:var(--card2);border-radius:8px;padding:8px 12px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;font-size:12px">
-          <span id="wm-bet-label" style="color:var(--sub)"></span>
-          <span id="wm-bet-status" style="font-family:var(--mono);font-weight:700"></span>
-        </div>
-        <!-- Speed controls -->
-        <div style="display:flex;gap:6px;margin-bottom:10px">
-          <button onclick="setWatchSpeed(800)" id="ws-slow" style="flex:1;background:var(--card2);border:1px solid var(--border);border-radius:6px;padding:6px;font-family:var(--mono);font-size:10px;color:var(--sub);cursor:pointer">🐢 Yavaş</button>
-          <button onclick="setWatchSpeed(400)" id="ws-med" style="flex:1;background:var(--card2);border:1px solid var(--border);border-radius:6px;padding:6px;font-family:var(--mono);font-size:10px;color:var(--sub);cursor:pointer">▶ Normal</button>
-          <button onclick="setWatchSpeed(80)" id="ws-fast" style="flex:1;background:var(--card2);border:1px solid var(--border);border-radius:6px;padding:6px;font-family:var(--mono);font-size:10px;color:var(--sub);cursor:pointer">⚡ Hızlı</button>
-          <button onclick="skipToEnd()" style="flex:1;background:var(--card2);border:1px solid var(--border);border-radius:6px;padding:6px;font-family:var(--mono);font-size:10px;color:var(--muted);cursor:pointer">⏭ Bitir</button>
-        </div>
-      </div>
-      <!-- Event feed -->
-      <div id="wm-feed" style="flex:1;overflow-y:auto;padding:0 16px 16px;display:flex;flex-direction:column-reverse"></div>
-    </div>`;
-    document.body.appendChild(modal);
-  }
-  modal.style.display='flex';
-  // Init
-  const ws=_watchState;
-  document.getElementById('wm-title').textContent=`${ws.h.icon} ${ws.h.short} vs ${ws.a.short} ${ws.a.icon}`;
-  document.getElementById('wm-h-icon').textContent=ws.h.icon;
-  document.getElementById('wm-h-name').textContent=ws.h.short;
-  document.getElementById('wm-a-icon').textContent=ws.a.icon;
-  document.getElementById('wm-a-name').textContent=ws.a.short;
-  document.getElementById('wm-score').textContent='0 – 0';
-  document.getElementById('wm-min').textContent="⏱ 0'";
-  document.getElementById('wm-feed').innerHTML='';
-  // Bet status
-  if(ws.bet){
-    const bd=document.getElementById('wm-bet');
-    if(bd)bd.style.display='flex';
-    const bl=document.getElementById('wm-bet-label');
-    if(bl)bl.textContent=`Bahsin: ${sideName(ws.bet.side)} @ ${ws.bet.odds.toFixed(2)}×`;
-    updateWatchBetStatus();
-  }
-  startWatchTick();
-}
-
-function updateWatchBetStatus(){
-  const ws=_watchState; if(!ws?.bet)return;
-  const fakeResult={hg:ws.curHg,ag:ws.curAg,res:ws.curHg>ws.curAg?'HOME':ws.curHg<ws.curAg?'AWAY':'DRAW',total:ws.curHg+ws.curAg};
-  const winning=betWon(ws.bet.side,fakeResult);
-  const el=document.getElementById('wm-bet-status');
-  if(el){
-    if(ws.finished){
-      const finalResult={hg:ws.hg,ag:ws.ag,res:ws.hg>ws.ag?'HOME':ws.hg<ws.ag?'AWAY':'DRAW'};
-      const won=betWon(ws.bet.side,finalResult);
-      el.textContent=won?`✅ +${Math.floor(ws.bet.amount*ws.bet.odds-ws.bet.amount)}₺ KAZANDI`:`❌ -${ws.bet.amount}₺ KAYBETTİ`;
-      el.style.color=won?'var(--green)':'var(--red)';
-    } else {
-      el.textContent=winning?'🟢 Kazanıyor...':'🔴 Kaybediyor...';
-      el.style.color=winning?'var(--green)':'var(--red)';
-    }
-  }
-}
-
-function startWatchTick(){
-  const ws=_watchState;
-  clearInterval(_watchTimer);
-  if(ws.eventIdx>=ws.events.length){finishWatch();return;}
-  _watchTimer=setInterval(()=>{
-    if(!_watchState||_watchState.eventIdx>=_watchState.events.length){
-      finishWatch();return;
-    }
-    const ev=_watchState.events[_watchState.eventIdx];
-    _watchState.eventIdx++;
-    // Update score
-    if(ev.type==='goal'){
-      if(ev.team==='home')_watchState.curHg++;
-      else _watchState.curAg++;
-      const sc=document.getElementById('wm-score');
-      if(sc)sc.textContent=`${_watchState.curHg} – ${_watchState.curAg}`;
-    }
-    // Update minute
-    const mn=document.getElementById('wm-min');
-    if(mn)mn.textContent=`⏱ ${ev.min}'`;
-    // Add event to feed
-    addWatchEvent(ev);
-    updateWatchBetStatus();
-  },_watchState.speed);
-}
-
-function addWatchEvent(ev){
-  const feed=document.getElementById('wm-feed');
-  if(!feed)return;
-  const colors={goal:'var(--green)',red:'var(--red)',yellow:'var(--gold)',danger:'var(--blue)',var:'var(--purple)',whistle:'var(--muted)',op:'var(--gold)',away:'var(--red)'};
-  const col=ev.type==='goal'?(ev.team==='away'?'var(--red)':'var(--green)'):colors[ev.type]||'var(--muted)';
-  const div=document.createElement('div');
-  div.style.cssText=`display:flex;align-items:flex-start;gap:10px;padding:8px 10px;border-radius:8px;margin-bottom:6px;background:${ev.type==='goal'?'var(--card)':'var(--card2)'};border:1px solid ${ev.type==='goal'?col:'var(--border)'};animation:fadeIn .3s ease`;
-  div.innerHTML=`<span style="font-size:18px;flex-shrink:0">${ev.icon}</span>
-    <div style="flex:1">
-      <div style="font-family:var(--mono);font-size:9px;color:var(--muted);margin-bottom:2px">${ev.min}'</div>
-      <div style="font-size:12px;color:${ev.type==='goal'?col:'var(--text)'};${ev.type==='goal'?'font-weight:700':''}">${ev.txt}</div>
-    </div>`;
-  feed.insertBefore(div,feed.firstChild);
-}
-
-function finishWatch(){
-  clearInterval(_watchTimer);
-  if(!_watchState)return;
-  _watchState.finished=true;
-  updateWatchBetStatus();
-  const sc=document.getElementById('wm-score');
-  if(sc)sc.textContent=`${_watchState.hg} – ${_watchState.ag}`;
-  const mn=document.getElementById('wm-min');
-  if(mn)mn.textContent="🏁 Maç Bitti";
-}
-
-function skipToEnd(){
-  clearInterval(_watchTimer);
-  if(!_watchState)return;
-  while(_watchState.eventIdx<_watchState.events.length){
-    const ev=_watchState.events[_watchState.eventIdx++];
-    if(ev.type==='goal'){
-      if(ev.team==='home')_watchState.curHg++;
-      else _watchState.curAg++;
-    }
-    addWatchEvent(ev);
-  }
-  finishWatch();
-}
-
-function setWatchSpeed(ms){
-  if(!_watchState)return;
-  _watchState.speed=ms;
-  startWatchTick();
-}
-
-function closeWatchModal(){
-  clearInterval(_watchTimer);
-  const m=document.getElementById('watch-modal');
-  if(m)m.style.display='none';
+  return{hg,ag,res,total:hg+ag};
 }
 
 function updateLeague(hid,aid,hg,ag){
@@ -2567,7 +2200,7 @@ function payLoans(){
         G.log.push({l:`🔴 Taksit ödenemedi — Teminat haczedildi!`,v:0});
         done.push(loan);
       }else{
-        G.heat=clamp(G.heat+10,0,100);
+        G.tf=clamp(G.tf+.10,0,1);
         G.log.push({l:`🔴 Taksit ödenemedi — Şeffaflık +10%!`,v:0});
         loan.rem--;
       }
@@ -2687,48 +2320,26 @@ function htmlBActive(){
 }
 
 /* ═══════════ RENDER ═══════════ */
-function toggleMetricPanel(){
-  const p=$('metric-panel');
-  if(!p)return;
-  p.style.display=p.style.display==='none'?'block':'none';
-}
-function _metricOverlayClick(e){}
-
 function updateTopBar(){
   const bar=$('topbar');
   if(!bar||G.day===undefined){bar?.classList.remove('visible');return;}
   bar.classList.add('visible');
-  const days=G.cfg?.days||10;
-  $('tb-day').textContent=`GÜN ${G.day}/${days}`;
+  $('tb-day').textContent=`GÜN ${G.day}/10`;
   $('tb-phase').textContent={intel:'İSTİHBARAT',operation:'OPERASYON',market:'MARKET',result:'SONUÇLAR'}[G.phase]||G.phase.toUpperCase();
-  const myT=G.myTeam?TEAMS[G.myTeam]:null;
-  const coinsEl=$('tb-coins');
-  if(coinsEl)coinsEl.innerHTML=(myT?`<span style="margin-right:3px">${myT.icon}</span>`:'')+'₺'+Math.round(G.coins);
-  const h=Math.round(G.heat||0),p=Math.round(G.press||0),r=Math.round(G.rep||30);
-  // Mini bar in pill
-  const hEl=$('tb-heat');
-  if(hEl){hEl.style.width=h+'%';hEl.style.background=h<40?'var(--gold)':h<70?'#f06020':'var(--red)';}
-  // Dropdown panel bars
-  const mph=$('mp-heat');if(mph){mph.style.width=h+'%';mph.style.background=h<40?'var(--gold)':h<70?'#f06020':'var(--red)';}
-  const mpp=$('mp-press');if(mpp){mpp.style.width=p+'%';mpp.style.background=p<40?'var(--blue)':'var(--purple)';}
-  const mpr=$('mp-rep');if(mpr){mpr.style.width=r+'%';mpr.style.background=r<30?'var(--muted)':r<60?'var(--purple)':'var(--gold)';}
-  const hv=$('mp-heat-val');if(hv){hv.textContent=h;hv.style.color=h<40?'var(--gold)':h<70?'#f06020':'var(--red)';}
-  const pv=$('mp-press-val');if(pv){pv.textContent=p;pv.style.color=p<40?'var(--blue)':'var(--purple)';}
-  const rv=$('mp-rep-val');if(rv){rv.textContent=r;rv.style.color=r<30?'var(--muted)':r<60?'var(--purple)':'var(--gold)';}
-  const hd=$('mp-heat-desc');if(hd)hd.textContent=h>70?'⚠️ Tehlike — polis yakın':h>40?'Orta — dikkatli ol':'Düşük — operasyon riski az';
-  const pd=$('mp-press-desc');if(pd)pd.textContent=p>65?'🗞️ Viral — transfer teklifleri iptal':p>30?'Aktif — basın takipte':'Sessiz — basın ilgisi yok';
-  const rd=$('mp-rep-desc');if(rd)rd.textContent=r>70?'👑 Tanınan — prestij bonusu aktif':r>30?'Orta — yeraltı duyuyor':'Yeni — yeraltı seni tanımıyor';
-  // Heart button
+  $('tb-coins').textContent=`₺${Math.round(G.coins)}`;
+  // Heart button — pulse pink if active, dim if none
   const hb=$('tb-heart-btn');
   if(hb){
     const rt=G.rel?REL_TYPES.find(r=>r.id===G.rel.typeId):null;
     if(rt&&rt.id!=='none'){
       const drama=G.rel.drama||0;
       const col=drama>60?'#ff3060':drama>30?'#e060c0':'#c040a0';
-      hb.style.color=col;hb.style.borderColor=col;
+      hb.style.color=col; hb.style.borderColor=col;
       hb.textContent=drama>60?'💔':'❤️';
     }else{hb.style.color='#3a2030';hb.style.borderColor='#1e1030';hb.textContent='🤍';}
   }
+  const pct=Math.round(G.tf*100),f=$('tb-tf');
+  if(f){f.style.width=pct+'%';f.style.background=pct<30?'#22c45e':pct<55?'#f0a020':'#e8304a';}
 }
 function renderGame(){updateTopBar();renderPhase();}
 function renderPhase(){
@@ -2740,27 +2351,9 @@ function renderPhase(){
     case'result':   c.innerHTML=htmlResult();break;
   }
 }
-function goPhase(p){
-  if(!G._phaseHistory)G._phaseHistory=[];
-  G._phaseHistory.push(G.phase);
-  G.phase=p;updateTopBar();renderPhase();
-}
-function goBack(){
-  if(!G._phaseHistory?.length)return;
-  const prev=G._phaseHistory.pop();
-  G.phase=prev;updateTopBar();renderPhase();
-}
-function canGoBack(){
-  if(!G._phaseHistory?.length)return false;
-  const prev=G._phaseHistory[G._phaseHistory.length-1];
-  if(prev==='result'||G.phase==='result')return false;
-  return true;
-}
+function goPhase(p){G.phase=p;updateTopBar();renderPhase();}
 function nextDay(){
-  G.heat=Math.max(0,(G.heat||0)-3);
-  G.press=Math.max(0,(G.press||0)-5);
-  G.rep=Math.min(100,(G.rep||30)+1);
-  if(G.day>=(G.totalDays||10)){endGame();return;}
+  if(G.day>=10){endGame();return;}
   G.day++;
   // Slower form decay over 10 days (was 0.7, now 0.85)
   for(const t of Object.values(G.teams))t.form=clamp(Math.round(t.form*.85),-8,8);
@@ -2938,28 +2531,12 @@ function htmlIntel(){
   ];
 
   return `
-  <div style="flex-shrink:0;background:var(--bg);border-bottom:1px solid var(--border);padding:10px 16px 0">
-    <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-      ${canGoBack()?'<button class="back-btn" onclick="goBack()">← Geri</button>':''}
-      <div style="display:flex;gap:3px;flex:1">
-        <div class="phase-step active"></div><div class="phase-step"></div>
-        <div class="phase-step"></div><div class="phase-step"></div>
-      </div>
-      <span style="font-family:var(--mono);font-size:9px;color:var(--muted)">GÜN ${G.day}/${G.totalDays||10}</span>
-    </div>
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:10px">
-      <div><div class="ph-title">İSTİHBARAT</div><div class="ph-sub">Haberleri oku · Analiz et · Ajan kirala</div></div>
-      <div style="display:flex;gap:8px">
-        ${[{v:Math.round(G.heat||0),icon:'🔥',c:(G.heat||0)>60?'var(--red)':(G.heat||0)>35?'var(--gold)':'var(--green)',l:'ISI'},
-           {v:Math.round(G.press||0),icon:'📰',c:(G.press||0)>55?'var(--blue)':(G.press||0)>30?'var(--gold)':'var(--green)',l:'MANŞET'},
-           {v:Math.round(G.rep||30),icon:'💎',c:(G.rep||0)>60?'var(--gold)':(G.rep||0)>30?'var(--purple)':'var(--muted)',l:'PRESTİJ'}
-          ].map(m=>`<div style="text-align:center;min-width:32px">
-            <div style="font-family:var(--mono);font-size:13px;font-weight:700;color:${m.c}">${m.v}</div>
-            <div style="font-family:var(--mono);font-size:7px;color:var(--muted)">${m.l}</div>
-          </div>`).join('')}
-      </div>
-    </div>
+  <div class="phase-steps" style="flex-shrink:0">
+    <div class="phase-step active"></div><div class="phase-step"></div>
+    <div class="phase-step"></div><div class="phase-step"></div>
   </div>
+  <div class="ph-title">İSTİHBARAT</div>
+  <div class="ph-sub" style="margin-bottom:10px">Haberleri oku, analiz et, ajan kirala.</div>
 
   ${tabBar}
 
@@ -2981,8 +2558,7 @@ function switchIntelTab(i){
 /* ── OPERATION ── */
 let _sop=null,_smi=null;
 function htmlOp(){
-  const opUnlockMap={ref_buy:'op_referee',player_sab:'op_sabotage',press_leak:'op_press',goal_fix:'op_score_fix'};
-  const avail=Object.entries(AGENTS).filter(([id])=>G.hired.has(id)).map(([,ag])=>ag.op).filter(opId=>isUnlocked(opUnlockMap[opId]||'betting'));
+  const avail=Object.entries(AGENTS).filter(([id])=>G.hired.has(id)).map(([,ag])=>ag.op);
   if(G.opDone){
     const op=OPS[G.opRes.opId],m=G.matches[G.opRes.mi];
     return `
@@ -3164,15 +2740,12 @@ function htmlMarket(){
 
   const loanWarn=G.loans.length?`<div style="text-align:center;font-family:var(--mono);font-size:11px;color:var(--red);margin-bottom:10px">💳 Bu gün sonu: −${G.loans.reduce((s,l)=>s+l.inst,0)}₺ taksit kesilecek</div>`:'';
   const placed=G.bets.filter(Boolean).length;
-  const mBackBtn=canGoBack()?'<button class="back-btn" onclick="goBack()" style="margin-bottom:8px">← Geri</button>':'';
   return `
-  ${mBackBtn}
   <div class="phase-steps"><div class="phase-step done"></div><div class="phase-step done"></div><div class="phase-step active"></div><div class="phase-step"></div></div>
   <div class="ph-title">MARKET</div><div class="ph-sub">MS1 · MSX · MS2 · Alt/Üst 2.5</div>
-  ${showTutorial('market_day1')}
   ${loanWarn}${cards}
   <div class="spacer"></div>
-  <button class="btn btn-red" onclick="startMatchSim()">▶ MAÇLARI BAŞLAT${placed?` (${placed} bahis)`:''}</button>
+  <button class="btn btn-red" onclick="resolveDay()">SONUÇLARA GİT${placed?` (${placed} bahis)`:''} →</button>
   <div style="height:8px"></div>`;
 }
 
@@ -3228,20 +2801,18 @@ function htmlResult(){
         ${won?`+${pay-bet.amount}₺`:`-${bet.amount}₺`}
         <span style="font-size:12px;color:var(--sub)"> (${sideName(bet.side)} · ${bet.amount}₺ @ ${bet.odds.toFixed(2)}×)</span>
       </div>`:'<div style="font-size:12px;color:var(--muted)">Bahis yapılmadı</div>'}
-
     </div>`;
   }).join('');
 
   const logRows=G.log.map(item=>`<div class="log-row"><span class="log-lbl">${item.l}</span><span class="log-val ${item.v>0?'pos':item.v<0?'neg':'neu'}">${item.v!==0?fmtC(item.v):'—'}</span></div>`).join('');
   G._pd=G.coins-G._sod;
-  const isLast=G.day>=(G.totalDays||10);
-  const isHalf=G.day===Math.floor((G.totalDays||10)/2);
+  const isLast=G.day>=10;
+  const isHalf=G.day===5;
 
   return `
   <div class="phase-steps"><div class="phase-step done"></div><div class="phase-step done"></div><div class="phase-step done"></div><div class="phase-step active"></div></div>
   <div class="ph-title">SONUÇLAR</div>
-  <div class="ph-sub">Gün ${G.day}/${G.totalDays||10} · <strong style="color:var(--gold)">₺${Math.round(G.coins)}</strong></div>
-  ${showTutorial('result_day1')}
+  <div class="ph-sub">Gün ${G.day}/10 · <strong style="color:var(--gold)">₺${Math.round(G.coins)}</strong></div>
 
   ${isHalf?`<div style="background:linear-gradient(135deg,#0e1a0e,#1a2e1a);border:1px solid var(--green);border-radius:12px;padding:16px;margin-bottom:12px;text-align:center">
     <div style="font-size:28px;margin-bottom:6px">⚽</div>
@@ -3335,11 +2906,9 @@ function htmlLeague(){
 /* ═══════════ GAME OVER ═══════════ */
 function endGame(){
   const rank=getRank(G.coins);
-  SCORES.push({coins:Math.round(G.coins),rank:rank.rank,name:G.name,diff:G.diff,days:G.totalDays||10});
+  SCORES.push({coins:Math.round(G.coins),rank:rank.rank,name:G.name,diff:G.diff});
   SCORES.sort((a,b)=>b.coins-a.coins);SCORES=SCORES.slice(0,10);
   localStorage.setItem('illegal_scores',JSON.stringify(SCORES));
-  RUN_COUNT++;
-  localStorage.setItem('illegal_runCount',String(RUN_COUNT));
   showGameOver();
 }
 function showGameOver(){
@@ -3374,13 +2943,6 @@ function showGameOver(){
   </div>` : ''}
   ${htmlBestScores()}
   <div class="spacer"></div>
-  ${(()=>{
-    const nu=Object.entries(UNLOCKS).filter(([,v])=>v===RUN_COUNT-1).map(([k])=>UNLOCK_LABELS[k]).filter(Boolean);
-    return nu.length?`<div style="background:linear-gradient(135deg,#0a1a08,#0d2a0a);border:1px solid var(--green);border-radius:12px;padding:14px;margin-bottom:12px">
-      <div style="font-family:var(--mono);font-size:8px;color:var(--green);letter-spacing:.15em;margin-bottom:8px">🔓 SONRAKİ RUN'DA AÇILANLAR</div>
-      ${nu.map(l=>`<div style="font-size:13px;color:#fff;padding:4px 0;border-bottom:1px solid #1e3020">${l}</div>`).join('')}
-    </div>`:'<div style="background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px;margin-bottom:10px;text-align:center"><div style="font-family:var(--mono);font-size:11px;color:var(--gold)">Run #${RUN_COUNT} tamamlandı.</div></div>';
-  })()}
   <button class="btn btn-red" onclick="showHome()">🔄 YENİ RUN</button>
   <div style="height:8px"></div>`;
 }
@@ -3406,7 +2968,6 @@ function htmlBestScores(){
 }
 function showSetup(){
   let sel='fixer';
-  let selTeam='ASL';
   $('topbar').classList.remove('visible');
 
   const CARDS={
@@ -3473,7 +3034,6 @@ function showSetup(){
     <div style="padding:32px 0 20px;text-align:center">
       <div class="logo" style="font-size:40px">illegal<span>football</span></div>
       <div class="logo-sub">yönetici profili</div>
-      ${RUN_COUNT>0?`<div style="font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:6px">Run #${RUN_COUNT+1} · ${Object.values(UNLOCKS).filter(v=>v<RUN_COUNT+1).length}/${Object.keys(UNLOCKS).length} özellik açık</div>`:''}
     </div>
 
     <div class="sec-title">YÖNETİCİ ADI</div>
@@ -3487,18 +3047,6 @@ function showSetup(){
       </span>
     </div>
 
-    <div class="sec-title">TAKIMINı SEÇ</div>
-    <div style="font-size:12px;color:var(--sub);margin-bottom:10px">Hangi kulübün başkanısın?</div>
-    <div style="display:flex;gap:8px;margin-bottom:20px">
-      ${Object.entries(TEAMS).map(([id,t])=>{
-        const active=selTeam===id;
-        return `<div onclick="pickTeam('${id}')" style="flex:1;background:${active?t.color+'18':'var(--card2)'};border:${active?`2px solid ${t.color}`:'1px solid var(--border)'};border-radius:12px;padding:12px 8px;cursor:pointer;text-align:center;transition:all .2s">
-          <div style="font-size:28px;margin-bottom:4px">${t.icon}</div>
-          <div style="font-family:var(--cond);font-size:13px;font-weight:900;color:${active?t.color:'#fff'}">${t.name}</div>
-          <div style="font-family:var(--mono);font-size:8px;color:var(--muted);margin-top:2px">${t.short}</div>
-        </div>`;
-      }).join('')}
-    </div>
     <div class="sec-title">ZORLUK SEÇ</div>
     ${cards}
 
@@ -3509,220 +3057,14 @@ function showSetup(){
   };
 
   window.pickD=id=>{sel=id;render();};
-  window.pickTeam=id=>{selTeam=id;render();};
   window.doStart=()=>{
     const n=($('pname')?.value.trim())||'Misafir';
-    if(DIFF[sel]?.reqRun && RUN_COUNT < DIFF[sel].reqRun){alert(`Godfather modu için ${DIFF[sel].reqRun} run tamamla!`);return;}
-    initRun(n,sel,selTeam);
+    initRun(n,sel);
   };
   render();
 }
 
 /* ═══════════ ENTRY ═══════════ */
-/* ═══════════ MAÇ SİMÜLASYONU ═══════════ */
-
-let _ST = null; // sim timers array [t0,t1]
-let _SS = 250;  // speed ms
-
-function startMatchSim(){
-  resolveDay();
-  _openSim();
-}
-
-function _openSim(){
-  // lock body scroll
-  document.body.style.overflow='hidden';
-  document.documentElement.style.overflow='hidden';
-
-  let el=document.getElementById('SIM');
-  if(!el){ el=document.createElement('div'); el.id='SIM'; document.body.appendChild(el); }
-
-  // full-page overlay — sits on top of everything, opaque black
-  el.style.cssText=[
-    'position:fixed','top:0','left:0','right:0','bottom:0',
-    'width:100vw','height:100vh',
-    'background:#080810',
-    'z-index:9999',
-    'display:flex','flex-direction:column',
-    'overflow:hidden',
-    'max-width:460px',
-    'margin:0 auto',
-  ].join(';');
-
-  const ms=G.matches;
-  const [m0,m1]=ms;
-  const bet0=G.bets?.[0]||null, bet1=G.bets?.[1]||null;
-
-  el.innerHTML=`
-<div style="flex-shrink:0;background:#0d0d1a;border-bottom:1px solid #1e1e35;padding:8px 14px;display:flex;align-items:center;justify-content:space-between">
-  <div>
-    <div style="font-family:'Space Mono',monospace;font-size:8px;color:#3a3a5a;letter-spacing:.12em">GÜN ${G.day}/${G.totalDays||10} · SİMÜLASYON</div>
-    <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:900;color:#fff">CANLI MAÇLAR</div>
-  </div>
-  <div style="display:flex;gap:6px;align-items:center">
-    <button id="SIM-spd" onclick="_simToggleSpeed()" style="background:#16162a;border:1px solid #1e1e35;border-radius:6px;padding:5px 10px;font-family:'Space Mono',monospace;font-size:10px;color:#f0a020;cursor:pointer">🐢 Yavaş</button>
-    <button onclick="_closeSim()" style="background:none;border:1px solid #1e1e35;border-radius:6px;padding:5px 10px;font-family:'Space Mono',monospace;font-size:10px;color:#7070a0;cursor:pointer">✕</button>
-  </div>
-</div>
-<div style="flex:1;display:flex;flex-direction:column;min-height:0;overflow:hidden">
-  ${_simPanel(0,m0,bet0)}
-  ${_simPanel(1,m1,bet1)}
-</div>
-<div id="SIM-cta" style="display:none;flex-shrink:0;padding:12px 16px 24px;background:#080810;border-top:2px solid #1e1e35">
-  <button onclick="finishSim()" style="width:100%;background:#e8304a;border:none;border-radius:10px;padding:16px;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;color:#fff;cursor:pointer;letter-spacing:.03em">📊 SONUÇLARA GİT →</button>
-</div>`;
-
-  _ST=[null,null];
-  _simState=[
-    {idx:0,hg:0,ag:0,done:false},
-    {idx:0,hg:0,ag:0,done:false},
-  ];
-  _SS=250;
-  _simStart(0);
-  _simStart(1);
-}
-
-function _simPanel(mi,m,bet){
-  if(!m)return'';
-  const h=TEAMS[m.h],a=TEAMS[m.a];
-  return `<div id="SIM-P${mi}" style="flex:1;display:flex;flex-direction:column;min-height:0;overflow:hidden;${mi===0?'border-bottom:2px solid #28284a':''}">
-  <div style="flex-shrink:0;background:#0d0d1a;padding:10px 14px 8px">
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:7px">
-      <div style="display:flex;align-items:center;gap:8px;flex:1">
-        <span style="font-size:24px">${h.icon}</span>
-        <div><div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:900;color:#fff">${h.name}</div>
-        <div style="font-family:'Space Mono',monospace;font-size:8px;color:#7070a0">GÜÇ ${G.teams[m.h].power}</div></div>
-      </div>
-      <div style="text-align:center;padding:0 10px">
-        <div id="SIM-SC${mi}" style="font-family:'Barlow Condensed',sans-serif;font-size:38px;font-weight:900;color:#fff;line-height:1;transition:transform .15s;white-space:nowrap">0–0</div>
-        <div id="SIM-MN${mi}" style="font-family:'Space Mono',monospace;font-size:9px;color:#3a3a5a;margin-top:1px">⏱ 0'</div>
-      </div>
-      <div style="display:flex;align-items:center;gap:8px;flex:1;justify-content:flex-end">
-        <div style="text-align:right"><div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:900;color:#fff">${a.name}</div>
-        <div style="font-family:'Space Mono',monospace;font-size:8px;color:#7070a0">GÜÇ ${G.teams[m.a].power}</div></div>
-        <span style="font-size:24px">${a.icon}</span>
-      </div>
-    </div>
-    <div style="height:3px;background:#1e1e35;border-radius:2px;overflow:hidden${bet?';margin-bottom:5px':''}">
-      <div id="SIM-PG${mi}" style="height:100%;width:0%;background:#e8304a;border-radius:2px;transition:width .25s"></div>
-    </div>
-    ${bet?`<div style="display:flex;justify-content:space-between;align-items:center">
-      <span style="font-family:'Space Mono',monospace;font-size:9px;color:#7070a0">${sideName(bet.side)} @${bet.odds.toFixed(2)}×</span>
-      <span id="SIM-BT${mi}" style="font-family:'Space Mono',monospace;font-size:9px;font-weight:700;color:#3a3a5a">—</span>
-    </div>`:''}
-  </div>
-  <div id="SIM-FD${mi}" style="flex:1;overflow-y:auto;padding:6px 12px;display:flex;flex-direction:column-reverse;-webkit-overflow-scrolling:touch"></div>
-  <div id="SIM-BW${mi}" style="flex-shrink:0;padding:6px 12px 8px;background:#0d0d1a;border-top:1px solid #1e1e35">
-    <button id="SIM-BN${mi}" onclick="_simFinish(${mi})" style="width:100%;background:#16162a;border:1px solid #1e1e35;border-radius:8px;padding:9px;font-family:'Space Mono',monospace;font-size:10px;color:#7070a0;cursor:pointer">⏭ Maçı Bitir</button>
-  </div>
-</div>`;
-}
-
-let _simState=[{idx:0,hg:0,ag:0,done:false},{idx:0,hg:0,ag:0,done:false}];
-
-function _simStart(mi){
-  clearInterval(_ST[mi]);
-  const m=G.matches[mi];
-  if(!m?.result)return;
-  const evs=m.result.events||[];
-  if(_simState[mi].idx>=evs.length){_simFinalize(mi);return;}
-  _ST[mi]=setInterval(()=>{
-    if(_simState[mi].idx>=evs.length){clearInterval(_ST[mi]);_simFinalize(mi);return;}
-    _simTick(mi);
-  },_SS);
-}
-
-function _simTick(mi){
-  const m=G.matches[mi];
-  const evs=m.result.events||[];
-  if(_simState[mi].idx>=evs.length)return;
-  const ev=evs[_simState[mi].idx++];
-  const st=_simState[mi];
-
-  if(ev.type==='goal'){
-    if(ev.team==='home')st.hg++;else st.ag++;
-    const sc=document.getElementById('SIM-SC'+mi);
-    if(sc){sc.textContent=`${st.hg}–${st.ag}`;sc.style.transform='scale(1.18)';setTimeout(()=>{const s=document.getElementById('SIM-SC'+mi);if(s)s.style.transform='scale(1)';},200);}
-  }
-
-  const pg=document.getElementById('SIM-PG'+mi);
-  if(pg)pg.style.width=Math.min(100,Math.round((ev.min/90)*100))+'%';
-  const mn=document.getElementById('SIM-MN'+mi);
-  if(mn)mn.textContent=ev.min>=90?'🏁':('⏱ '+ev.min+"'");
-
-  const bet=G.bets?.[mi];
-  if(bet){
-    const fr={hg:st.hg,ag:st.ag,res:st.hg>st.ag?'HOME':st.hg<st.ag?'AWAY':'DRAW'};
-    const w=betWon(bet.side,fr);
-    const bel=document.getElementById('SIM-BT'+mi);
-    if(bel){bel.textContent=w?'🟢 Kazanıyor':'🔴 Kaybediyor';bel.style.color=w?'#22c45e':'#e8304a';}
-  }
-
-  const feed=document.getElementById('SIM-FD'+mi);
-  if(!feed)return;
-  const isGoal=ev.type==='goal';
-  const col=isGoal?(ev.team==='home'?'#22c45e':'#e8304a'):
-    ev.type==='yellow'?'#f0a020':ev.type==='red'?'#e8304a':
-    ev.type==='whistle'?'#3a3a5a':ev.type==='op'?'#f0a020':'#3a8eff';
-  const d=document.createElement('div');
-  d.style.cssText=`display:flex;gap:7px;padding:${isGoal?7:4}px 8px;border-radius:7px;margin-bottom:4px;background:${isGoal?'#111120':'#16162a'};border:1px solid ${isGoal?col:'#1e1e35'};flex-shrink:0;animation:fadeIn .2s ease`;
-  d.innerHTML=`<span style="font-size:${isGoal?16:12}px;flex-shrink:0;padding-top:1px">${ev.icon}</span>
-<div><div style="font-family:'Space Mono',monospace;font-size:7px;color:#3a3a5a">${ev.min}'</div>
-<div style="font-size:${isGoal?11:10}px;color:${isGoal?col:'#d8d8f0'};${isGoal?'font-weight:700':''};line-height:1.35">${ev.txt}</div></div>`;
-  feed.insertBefore(d,feed.firstChild);
-}
-
-function _simFinish(mi){
-  clearInterval(_ST[mi]);
-  const m=G.matches[mi];
-  if(!m?.result)return;
-  const evs=m.result.events||[];
-  while(_simState[mi].idx<evs.length)_simTick(mi);
-  _simFinalize(mi);
-}
-
-function _simFinalize(mi){
-  clearInterval(_ST[mi]);
-  _simState[mi].done=true;
-  const m=G.matches[mi];
-  if(!m?.result)return;
-  const sc=document.getElementById('SIM-SC'+mi);
-  if(sc)sc.textContent=`${m.result.hg}–${m.result.ag}`;
-  const mn=document.getElementById('SIM-MN'+mi);if(mn)mn.textContent='🏁 Bitti';
-  const pg=document.getElementById('SIM-PG'+mi);if(pg)pg.style.width='100%';
-  const bet=G.bets?.[mi];
-  if(bet){
-    const won=betWon(bet.side,m.result);
-    const bel=document.getElementById('SIM-BT'+mi);
-    if(bel){bel.textContent=won?`✅ +${Math.floor(bet.amount*bet.odds-bet.amount)}₺`:`❌ -${bet.amount}₺`;bel.style.color=won?'#22c45e':'#e8304a';bel.style.fontSize='10px';}
-  }
-  const btn=document.getElementById('SIM-BN'+mi);
-  if(btn){btn.textContent='✓ Bitti';btn.style.color='#22c45e';btn.style.borderColor='#22c45e';btn.onclick=null;}
-  if(_simState[0].done&&_simState[1].done){
-    [0,1].forEach(i=>{const bw=document.getElementById('SIM-BW'+i);if(bw)bw.style.display='none';});
-    const cta=document.getElementById('SIM-cta');if(cta)cta.style.display='block';
-  }
-}
-
-function _simToggleSpeed(){
-  const fast=_SS===250;
-  _SS=fast?80:250;
-  const btn=document.getElementById('SIM-spd');
-  if(btn)btn.textContent=fast?'⚡ Hızlı':'🐢 Yavaş';
-  [0,1].forEach(i=>{if(!_simState[i].done)_simStart(i);});
-}
-
-function _closeSim(){finishSim();}
-
-function finishSim(){
-  if(_ST){_ST.forEach(t=>clearInterval(t));}
-  document.body.style.overflow='';
-  document.documentElement.style.overflow='';
-  const el=document.getElementById('SIM');
-  if(el)el.style.display='none';
-  renderPhase();
-}
-
 showHome();
 </script>
 </body>
